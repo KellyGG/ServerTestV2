@@ -32,8 +32,16 @@ jobs:
           command: cd ~/repo/TestFunction2
       - run:
           name: Zip function TestFunction 1
-          command: uname -a 
-
+          command: Cp node_modules ~/repo/TestFunction2
+      - run:
+          name: Zip function TestFunction 1.5
+          command: Cp handler.js ~/repo/TestFunction2
+      - run:
+          name: Zip function TestFunction 1.7
+          command: zip -r compressed_index.zip TestFunction2
+      - run:
+          name: Zip function TestFunction 1.9
+          command: update-function-code \ --function-name TestFunction \  --s3-bucket testlambdakj \  --s3-key builds/index.zip 
       - run:
           name: Zip function TestFunction 2 
           command: zip -r index.zip . node_modules  . handler.js
