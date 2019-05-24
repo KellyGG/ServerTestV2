@@ -23,13 +23,13 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Zip function TestFunction
-          command: cd PATH_TO_LAMBDA/TestFunction && zip -r index.zip node_modules index.js
+          command: cd /TestFunction && zip -r index.zip node_modules index.js
       - run:
           name: Update Lambda function TestFunction
-          command: aws lambda update-function-code --region $REGION --function-name 'arn:aws:lambda:us-east-1:359295690701:function:TestFunction' --zip-file fileb://PATH_TO_LAMBA/TestFunction/index.zip
+          command: aws lambda update-function-code --region us-east-1 --function-name 'arn:aws:lambda:us-east-1:359295690701:function:TestFunction' --zip-file fileb://PATH_TO_LAMBA/TestFunction/index.zip
       - run:
           name: Update Lambda configuration for TestFunction
-          command: aws lambda update-function-configuration --region $REGION --function-name 'arn:aws:lambda:us-east-1:359295690701:function:TestFunction' --timeout 30 --memory-size 1024 --runtime 'nodejs8.10' 
+          command: aws lambda update-function-configuration --region us-east-1--function-name 'arn:aws:lambda:us-east-1:359295690701:function:TestFunction' --timeout 30 --memory-size 1024 --runtime 'nodejs8.10' 
       # run tests!
       - run: 
           name: Run tests with coverage
