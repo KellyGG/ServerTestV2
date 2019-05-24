@@ -38,7 +38,7 @@ jobs:
           command: cp TestFunction/handler.js ../TestFunction2
       - run:
           name: Zip function TestFunction 1
-          command: cp -R node_modules ../TestFunction2
+          command: cp  ~/repo/node_modules ../TestFunction2
       - run:
           name: Zip function TestFunction 1.7
           command: zip -r compressed_index.zip TestFunction2
