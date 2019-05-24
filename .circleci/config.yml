@@ -22,11 +22,14 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: 
-          name: Create folder
-          command: mkdir TestFunction
+          name: Get paths
+          command: cd ~/repo
+      - run: 
+          name: Create folder in repo
+          command: mkdir TestFunction2
       - run:
           name: Zip function TestFunction
-          command: cd /TestFunction && zip -r index.zip node_modules index.js
+          command: cd /TestFunction2 && zip -r index.zip node_modules index.js
       - run:
           name: Update Lambda function TestFunction
           command: aws lambda update-function-code --region us-east-1 --function-name 'arn:aws:lambda:us-east-1:359295690701:function:TestFunction' --zip-file fileb://PATH_TO_LAMBA/TestFunction/index.zip
