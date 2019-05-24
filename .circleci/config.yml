@@ -26,22 +26,22 @@ jobs:
           command: cd ~/repo
       - run: 
           name: Create folder in repo
-          command: mkdir TestFunction2
+          command: mkdir TestFunction3
       - run: 
           name: Get paths with new folder
-          command: cd ~/repo/TestFunction2
+          command: cd ~/repo/TestFunction3
       - run:
           name: Zip function TestFunction 1
           command: cp --help
       - run:
           name: Zip function TestFunction 1.5
-          command: cp TestFunction/handler.js ../TestFunction2
+          command: cp TestFunction/handler.js ../TestFunction3
       - run:
           name: Zip function TestFunction 1
-          command: cp -r ~/repo/node_modules ../TestFunction2
+          command: cp -r ~/repo/node_modules ../TestFunction3
       - run:
           name: Zip function TestFunction 1.7
-          command: zip -r compressed_index.zip TestFunction2
+          command: zip -r compressed_index.zip TestFunction3
       - run:
           name: Zip function TestFunction 1.9
           command: update-function-code \ --function-name TestFunction \  --s3-bucket testlambdakj \  --s3-key builds/index.zip 
