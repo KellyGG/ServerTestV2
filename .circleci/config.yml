@@ -31,8 +31,12 @@ jobs:
           name: Get paths with new folder
           command: cd ~/repo/TestFunction2
       - run:
-          name: Zip function TestFunction
-          command: zip -r index.zip . node_modules handler.js
+          name: Zip function TestFunction 1
+          command: uname -a
+
+      - run:
+          name: Zip function TestFunction 2 
+          command: zip -r index.zip . node_modules  . handler.js
       - run:
           name: Update Lambda function TestFunction 1
           command: aws lambda update-function-code --function-name TestFunction --zip-file index.zip
