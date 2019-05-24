@@ -32,10 +32,10 @@ jobs:
           command: cd ~/repo/TestFunction2
       - run:
           name: Zip function TestFunction 1
-          command: Cp node_modules ~/repo/TestFunction2
+          command: cp node_modules ~/repo/TestFunction2
       - run:
           name: Zip function TestFunction 1.5
-          command: Cp handler.js ~/repo/TestFunction2
+          command: cp handler.js ~/repo/TestFunction2
       - run:
           name: Zip function TestFunction 1.7
           command: zip -r compressed_index.zip TestFunction2
