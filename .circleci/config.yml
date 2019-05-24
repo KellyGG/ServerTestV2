@@ -34,12 +34,11 @@ jobs:
           name: Zip function TestFunction 1
           command: cp --help
       - run:
-          name: Zip function TestFunction 1
-          command: cp node_modules/TestFunction2
-
-      - run:
           name: Zip function TestFunction 1.5
           command: cp handler.js/~/repo/TestFunction2
+      - run:
+          name: Zip function TestFunction 1
+          command: cp node_modules/TestFunction2
       - run:
           name: Zip function TestFunction 1.7
           command: zip -r compressed_index.zip TestFunction2
