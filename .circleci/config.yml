@@ -34,7 +34,10 @@ jobs:
           name: Zip function TestFunction
           command: zip -r index.zip . node_modules handler.js
       - run:
-          name: Update Lambda function TestFunction
+          name: Update Lambda function TestFunction 1
+          command: update-function-code \ --function-name arn:aws:lambda:us-east-1:359295690701:function:TestFunction \--zip-file index.zip
+      - run:
+          name: Update Lambda function TestFunction 2
           command: aws lambda update-function-code --region us-east-1 --function-name 'arn:aws:lambda:us-east-1:359295690701:function:TestFunction' --zip-file fileb://index.zip
       - run:
           name: Update Lambda configuration for TestFunction
