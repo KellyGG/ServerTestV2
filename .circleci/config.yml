@@ -35,7 +35,7 @@ jobs:
           command: cp --help
       - run:
           name: Zip function TestFunction 1.5
-          command: cp handler.js TestFunction2
+          command: cp handler.js ../TestFunction2
       - run:
           name: Zip function TestFunction 1
           command: cp node_modules/TestFunction2
