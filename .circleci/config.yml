@@ -17,9 +17,9 @@ jobs:
           command: |
             sudo npm i -g serverless
             npm install
-            sudo apt-get install python3.5
+            sudo apt-get install python3
             curl -O https://bootstrap.pypa.io/get-pip.py
-            sudo python3.5 get-pip.py
+            sudo python3 get-pip.py
             aws help
       - save_cache:
           paths:
