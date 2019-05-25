@@ -42,13 +42,7 @@ jobs:
       - run:
           name: zip file tiene
           command: ls -lha compressed_index.zip 
-
-      - run:
-          name: Zip function TestFunction 1.9
-          command: update-function-code \ --function-name TestFunction \  --s3-bucket testlambdakj \  --s3-key builds/index.zip 
-      - run:
-          name: Zip function TestFunction 2 
-          command: zip -r index.zip . node_modules  . handler.js
+          
       - run:
           name: Update Lambda function TestFunction 1
           command: aws lambda update-function-code \
