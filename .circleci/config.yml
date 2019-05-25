@@ -29,7 +29,7 @@ jobs:
           command: rm -rf TestFunction3 ; mkdir TestFunction3
       - run:
           name: Zip function TestFunction handler
-          command: cp /home/circleci/repo/node_modules/* /home/circleci/repo/TestFunction3 ; cp /home/circleci/repo/TestFunction/handler.js /home/circleci/repo/TestFunction3
+          command: cp -r /home/circleci/repo/node_modules/* /home/circleci/repo/TestFunction3 ; cp /home/circleci/repo/TestFunction/handler.js /home/circleci/repo/TestFunction3
         
       - run:
           name: pwd | ls
