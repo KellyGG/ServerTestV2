@@ -17,6 +17,11 @@ jobs:
           command: |
             sudo npm i -g serverless
             npm install
+            sudo apt-get install python2.7
+            curl -O https://bootstrap.pypa.io/get-pip.py
+            sudo python2.7 get-pip.py
+            sudo pip install awscli
+            aws help
       - save_cache:
           paths:
             - node_modules
@@ -42,7 +47,7 @@ jobs:
       - run:
           name: zip file tiene
           command: ls -lha compressed_index.zip 
-          
+
       - run:
           name: Update Lambda function TestFunction 1
           command: aws lambda update-function-code \
