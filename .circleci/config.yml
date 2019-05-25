@@ -35,8 +35,8 @@ jobs:
           command: cp --help
 
       - run:
-          name: pwd
-          command: pwd
+          name: pwd | ls
+          command: pwd | ls
 
       - run:
           name: Zip function TestFunction 1.5
