@@ -17,10 +17,10 @@ jobs:
           command: |
             sudo npm i -g serverless
             npm install
-            sudo apt-get install wheel
             sudo apt-get install python2.7
             curl -O https://bootstrap.pypa.io/get-pip.py
             sudo python2.7 get-pip.py
+            pip install --upgrade pip wheel
             sudo pip install awscli
             aws help
       - save_cache:
