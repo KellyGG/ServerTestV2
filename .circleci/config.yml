@@ -20,6 +20,7 @@ jobs:
             sudo apt-get install python3
             curl -O https://bootstrap.pypa.io/get-pip.py
             sudo python3 get-pip.py
+            sudo pip install awscli
             aws help
       - save_cache:
           paths:
