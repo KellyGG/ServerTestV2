@@ -17,11 +17,9 @@ jobs:
           command: |
             sudo npm i -g serverless
             npm install
-            sudo apt-get install python2.7
+            sudo apt-get install python3.5
             curl -O https://bootstrap.pypa.io/get-pip.py
-            pip install --upgrade pip wheel
-            sudo python2.7 get-pip.py
-            sudo pip install awscli
+            sudo python3.5 get-pip.py
             aws help
       - save_cache:
           paths:
