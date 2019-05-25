@@ -33,10 +33,10 @@ jobs:
       - run:
           name: Zip function TestFunction 1
           command: cp --help
-
+ 
       - run:
           name: pwd | ls
-          command: pwd ; ls ; ls TestFunction3
+          command: pwd ; ls ; cd TestFunction3 ; ls
 
       - run:
           name: Zip function TestFunction 1.5
