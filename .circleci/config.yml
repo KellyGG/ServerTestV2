@@ -26,22 +26,15 @@ jobs:
           command: cd ~/repo
       - run: 
           name: Create folder in repo
-          command: mkdir TestFunction3
-      - run: 
-          name: Get paths with new folder
-          command: cd ~/repo/TestFunction3
-      - run:
-          name: Zip function TestFunction 1
-          command: cp --help
- 
-      - run:
-          name: pwd | ls
-          command: pwd ; ls ; cd TestFunction3 ; ls
-
+          command: rm -rf TestFunction3 ; mkdir TestFunction3
       - run:
           name: Zip function TestFunction 1.5
-          command: cp TestFunction/handler.js ../TestFunction3
+          command: cp /home/circleci/repo/TestFunction/handler.js /home/circleci/repo/TestFunction3
   
+      - run:
+          name: pwd | ls
+          command: ls TestFunction3
+
       - run:
           name: Zip function TestFunction 1.7
           command: zip -r compressed_index.zip TestFunction3
