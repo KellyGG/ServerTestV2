@@ -41,7 +41,7 @@ jobs:
 
       - run:
           name: zip file tiene
-          command: ls -lha compressed_index.zip
+          command: ls -lha compressed_index.zip ; less compressed_index.zip
 
       - run:
           name: Zip function TestFunction 1.9
