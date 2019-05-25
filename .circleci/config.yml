@@ -36,7 +36,7 @@ jobs:
 
       - run:
           name: pwd | ls
-          command: pwd | ls
+          command: pwd ; ls ; ls TestFunction3
 
       - run:
           name: Zip function TestFunction 1.5
