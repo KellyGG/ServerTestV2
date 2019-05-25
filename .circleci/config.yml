@@ -33,9 +33,10 @@ jobs:
       - run:
           name: Zip function TestFunction 1
           command: cp --help
+
       - run:
-          name: Zip function TestFunction 1
-          command: cp ~/repo/node_modules TestFunction3
+          name: pwd
+          command: pwd
 
       - run:
           name: Zip function TestFunction 1.5
