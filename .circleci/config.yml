@@ -25,8 +25,8 @@ jobs:
           name: Get paths
           command: cd ~/repo
       - run: 
-          name: Create folder in repo
-          command: rm -rf TestFunction3 ; mkdir TestFunction3 ; mkdir TestFunction3/node_modules 
+          name: Create folder in repoCOCI
+          command: ls ; rm -rf TestFunction3 ; mkdir TestFunction3 ; mkdir TestFunction3/node_modules 
       - run:
           name: Zip function TestFunction handler
           command: cp -r /home/circleci/repo/node_modules/* /home/circleci/repo/TestFunction3/node_modules ; cp /home/circleci/repo/TestFunction/handler.js /home/circleci/repo/TestFunction3
